@@ -25,14 +25,14 @@ docker build -f Dockerfile -t puppets/hadoop:1.0 .
 ##### 4. create hadoop network
 
 ```
-sudo docker network create --driver=bridge hadoop
+docker network create --driver=bridge hadoop
 ```
 
 ##### 5. start container
 
 ```
 cd hadoop-docker
-sudo ./start-container.sh
+./start-container.sh
 ```
 
 **output:**
@@ -54,8 +54,9 @@ root@hadoop-master:~#
 
 ##### 7. run wordcount
 
+Hadoop对应版本号,自行替换
 ```
-./run-wordcount.sh 3.3.1(Hadoop对应版本号,自行替换)
+./run-wordcount.sh 3.3.4
 ```
 
 **output**
@@ -89,7 +90,7 @@ do 1~3 like section A
 ##### 2. rebuild docker image
 
 ```
-sudo ./resize-cluster.sh 5
+./resize-cluster.sh 5
 ```
 - specify parameter > 1: 2, 3..
 - this script just rebuild hadoop image with different **slaves** file, which pecifies the name of all slave nodes
@@ -98,7 +99,7 @@ sudo ./resize-cluster.sh 5
 ##### 3. start container
 
 ```
-sudo ./start-container.sh 5
+./start-container.sh 5
 ```
 - use the same parameter as the step 2
 

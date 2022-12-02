@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo ""
-
-echo -e "\nbuild docker hadoop image\n"
-sudo docker build -t puppets/hadoop:1.0 .
+echo "\nbuild docker hadoop image\n"
+docker build -f Dockerfile -t puppets/hadoop:1.0 --build-arg CACHEBUST=$(date +%s) .
 
 echo ""

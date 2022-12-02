@@ -8,4 +8,20 @@ Host hadoop-*
    StrictHostKeyChecking no
    UserKnownHostsFile=/dev/null
 
+Host hbase-*
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host spark-*
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host hive-*
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host *
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+
 LogLevel=quiet

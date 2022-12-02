@@ -10,6 +10,11 @@
     </property>
 
     <property>
+        <name>io.native.lib.available</name>
+        <value>true</value>
+    </property>
+
+    <property>
         <name>hadoop.tmp.dir</name>
         <value>/usr/local/hadoop/hadoop/tmp</value>
     </property>

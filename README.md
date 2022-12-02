@@ -1,27 +1,44 @@
 # hadoop-docker
 
-本项目主要是通过docker搭建Hadoop分布式集群
+Docker for Hadoop
 
-[hadoop-docker-aarch64](https://github.com/Weihong-Liu/hadoop-docker/tree/main/hadoop-docker-aarch64) => 适配MacOS M1芯片 以及 arm64架构
+## For ARM64
+[hadoop-docker-aarch64](/tree/main/hadoop-docker-aarch64)
 
-[hadoop-docker-x86_64](https://github.com/Weihong-Liu/hadoop-docker/tree/main/hadoop-docker-x86_64) => 适配x86架构
+## For X86_64
+[hadoop-docker-x86_64](/tree/main/hadoop-docker-x86_64)
 
-## X86架构
+# Publish the new version
 ```
-docker push puppets/hadoop:1.0
-
-./start-container.sh # 创建容器（默认3个，hadoop-master、hadoop-slave1、hadoop-slave2）
-```
-
-## ARM64架构
-```
-docker push puppets/hadoop_arm64:1.0
-
-./start-container.sh # 创建容器（默认3个，hadoop-master、hadoop-slave1、hadoop-slave2）
+docker push puppets/hadoop:1.1
 ```
 
-## 文件说明
+## For ARM66
+```
+docker push puppets/hadoop_arm64:1.1
+```
 
-`start-docker-hadoop.sh`启动容器并进入hadoop-master主机节点
+## Commands
 
-`stop-docker-hadoop.sh`停止运行容器
+Build or rebuild the image by new configs on `config` folder.
+
+```shell
+sh ./build-image.sh
+```
+
+```shell
+sh ./start-container.sh
+```
+
+
+```shell
+sh ./start-docker-hadoop.sh
+```
+
+```shell
+sh ./stop-docker-hadoop.sh
+```
+
+## Thanks
+
+https://github.com/Weihong-Liu/hadoop-docker
